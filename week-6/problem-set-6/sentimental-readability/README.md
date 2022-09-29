@@ -1,4 +1,4 @@
-# # In Readability, my task was to write a program in Python that can take some text and assess the approximate reading level of that text.
+# In Readability, my task was to write a program in Python that can take some text and assess the approximate reading level of that text.
 
 ## I've implemented a program that computes the approximate grade level needed to comprehend some text, per the below.
 
