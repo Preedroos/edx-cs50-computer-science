@@ -1,0 +1,30 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Its runtime below shows that.
+
+sort2 uses: Merge Sort
+
+How do you know?: Its runtime below shows that.
+
+sort3 uses: Selection Sort
+
+How do you know?: Its runtime below shows that.
+
+
+sorted10000.txt
+
+sort1 - 0.070s (inconsistent)
+sort2 - 0.078s
+sort3 - 0.180s (almost same performance)
+
+random10000.txt
+
+sort1 - 0.296s (inconsistent)
+sort2 - 0.061s (shortest time)
+sort3 = 0.183s (almost same performance)
+
+reversed10000.txt
+
+sort1 - 0.270s (inconsistent)
+sort2 - 0.094s (shortest time)
+sort3 - 0.163s (almost same performance)
