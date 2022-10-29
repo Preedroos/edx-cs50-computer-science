@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function checkChoice(choice)
+            {
+                if (choice.innerText == "13")
+                {
+                    choice.style.backgroundColor = "green";
+                }
+                else
+                {
+                    choice.style.backgroundColor = "red";
+                }
+            }
+
+            function checkResponse()
+            {
+                const responseInput = document.getElementById("responseInput");
+                let statusResponse = document.getElementById("statusResponse");
+                if (responseInput.value == "15264")
+                {
+                    statusResponse.innerText = "Correct!";
+                    statusResponse.style.color = "green";
+                }
+                else
+                {
+                    statusResponse.innerText = "Incorrect!";
+                    statusResponse.style.color = "red";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What is the next number of 1, 2, 3, 5, 8, ...?</h3>
+                <span id="statusChoice" ></span>
+                <button onclick="checkChoice(this)" >12</button>
+                <button onclick="checkChoice(this)" >13</button>
+                <button onclick="checkChoice(this)" >15</button>
+                <button onclick="checkChoice(this)" >16</button>
+                <button onclick="checkChoice(this)" >18</button>
+            </div>
+
+            <div class="section" >
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>PEACH is for HCAEP as well as 46251 is for:</h3>
+                <span id="statusResponse" ></span>
+                <input id="responseInput" placeholder="type your answer here" type="text" />
+                <button onclick="checkResponse()" >Check</button>
+            </div>
+        </div>
+    </body>
+</html>
