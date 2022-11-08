@@ -1,0 +1,74 @@
+body {
+  overflow: hidden;
+  background-color: #2d2d2d;
+  background-image: url(https://c4.wallpaperflare.com/wallpaper/827/973/104/halloween-minimalism-simple-simple-background-wallpaper-preview.jpg);
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.card {
+  padding: 10px;
+  margin: auto;
+  width: 24rem;
+  box-shadow: 3px 3px 5px #131313;
+  background-color: #edf0da;
+}
+
+.my-picture {
+  width: 70%;
+  border-radius: 40%;
+  margin: auto;
+  border: #f0dfad solid 1px;
+}
+
+#about {
+  text-align: center;
+}
+
+#about h5 {
+  text-transform: uppercase;
+}
+
+#tools .svg-icon {
+  height: 30px;
+  width: 30px;
+  transition: 200ms;
+}
+
+#social li {
+  background-color: #f0dfad;
+  color: #cd6a2e;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 200ms;
+}
+
+#social li:hover {
+  background-color: #cd6a2e;
+  color: #f0dfad;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#social li:hover a {
+  color: #f0dfad;
+}
+
+a {
+  padding: 5px 10px;
+  color: #cd6a2e;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0;
+  margin: 20px 0 0;
+  display: flex;
+  justify-content: space-around;
+}
