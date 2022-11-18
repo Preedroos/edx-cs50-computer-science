@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Birthdays</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Birthdays</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+
+                <h2>Add a Birthday</h2>
+                <!-- TODO: Create a form for users to submit a name, a month, and a day -->
+                <form action="/" method="POST">
+                    <input autocomplete="off" name="name" placeholder="Name" required type="text" />
+                    <input autocomplete="off" min="1" max="12" name="month" placeholder="Month" required type="number" />
+                    <input autocomplete="off" min="1" max="31" name="day" placeholder="Day" required type="number" />
+                    <button type="submit">Add Birthday</button>
+                </form>
+            </div>
+
+            <div class="section">
+
+                <h2>All Birthdays</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Birthday</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- TODO: Loop through the database entries to display them in this table -->
+                        {% for birthday in birthdays %}
+                            <tr>
+                                <form action="/delete" method="POST">
+                                    <input name="id" style="display: none;" value={{ birthday.id }} />
+                                    <td>{{ birthday.name }}</td>
+                                    <td>{{ birthday.month }}/{{ birthday.day }}</td>
+                                    <td> <button type="submit"> delete </button> </td>
+                                </form>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
