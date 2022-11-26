@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="input-group" id="form-div">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Stock" required type="text">
+            <button class="btn btn-primary" type="submit" id="button-addon1">Search</button>
+        </div>
+    </form>
+
+    {% if stock != None %}
+    <table class="table my-3">
+        <thead>
+          <tr>
+            <th scope="col">Symbol</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ stock.symbol }}</td>
+            <td>{{ stock.name }}</td>
+            <td>{{ stock.price | usd }}</td>
+          </tr>
+        </tbody>
+      </table>
+    {% endif %}
+
+{% endblock %}

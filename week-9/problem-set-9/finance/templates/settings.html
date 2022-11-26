@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Settings
+{% endblock %}
+
+{% block main %}
+<form action="/settings" method="post">
+  <div style="display: flex; flex-direction: column; width: 300px; margin: auto;">
+    <fieldset disabled>
+      <legend>Profile</legend>
+      <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">Username</label>
+        <input type="text" id="disabledTextInput" class="form-control" placeholder={{user.username}}
+          style="text-align: center;">
+      </div>
+    </fieldset>
+    <div class="mb-3">
+      <label for="disabledTextInput" class="form-label">New cash</label>
+      <input name="cash" type="number" id="disabledTextInput" class="form-control" placeholder="{{user.cash }}"
+        style="text-align: center;">
+    </div>
+
+    <button class="btn btn-primary" type="submit">Change</button>
+  </div>
+</form>
+{% endblock %}
